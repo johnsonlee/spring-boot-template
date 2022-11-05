@@ -6,9 +6,9 @@ plugins {
     kotlin("plugin.spring") version embeddedKotlinVersion
     kotlin("plugin.jpa") version embeddedKotlinVersion
 
-    id("org.springframework.boot") version "2.5.0"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("me.champeau.gradle.jmh") version "0.5.0"
+    id("org.springframework.boot") version "2.7.5"
+    id("io.spring.dependency-management") version "1.0.15.RELEASE"
+    id("me.champeau.gradle.jmh") version "0.5.3"
 }
 
 group = "io.johnsonlee.springboot"
@@ -26,14 +26,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter")
     implementation("io.micrometer:micrometer-registry-prometheus")
-    implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2020.0.3")
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
     }
 }
 

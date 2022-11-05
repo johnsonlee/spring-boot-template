@@ -1,4 +1,4 @@
-FROM johnsonlee/gradle-6.9:springboot-2.5.0 AS builder
+FROM johnsonlee/gradle-7.4:springboot-2.7.5 AS builder
 WORKDIR /app
 ADD . .
 RUN ./gradlew bootJar --no-daemon
